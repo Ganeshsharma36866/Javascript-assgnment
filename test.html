@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formSubmit">
+        <input type="text" placeholder="Text" id="text" />
+        <input type="password" placeholder="Text" id="pass" />
+        <input type="submit" value="Submit" id="" />
+    </form>
+</body>
+<script>
+    
+    let obj = {
+        mealType:"",
+        noofPersons:"",
+        restorent:"",
+        dishes:[
+            {name:"",quantity:""},
+            {name:"",quantity:""},
+            {name:"",quantity:""},
+            {name:"",quantity:""}
+        ]
+    }
+    
+    document.getElementById('formSubmit').addEventListener("submit", (e) => {
+        e.preventDefault()
+        let name = document.getElementById('text').value;
+        let pass = document.getElementById('pass').value
+        obj.name = name
+        obj.pass = pass
+        console.log(obj);
+    })
+
+</script>
+
+</html>
